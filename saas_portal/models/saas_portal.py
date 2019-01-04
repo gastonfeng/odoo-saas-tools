@@ -1,20 +1,20 @@
-import simplejson
-import werkzeug
-import requests
+import logging
 import random
 from datetime import datetime, timedelta
 
-from odoo import api, exceptions, fields, models
-from odoo.tools import scan_languages
-from odoo.tools.translate import _
-from odoo.addons.base.res.res_partner import _tz_get
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
-
-from odoo.addons.saas_base.exceptions import MaximumTrialDBException
+import requests
+import simplejson
+import werkzeug
 from odoo.addons.saas_base.exceptions import MaximumDBException
+from odoo.addons.saas_base.exceptions import MaximumTrialDBException
 from werkzeug.exceptions import Forbidden
 
-import logging
+from odoo import api, exceptions, fields, models
+from odoo.addons.base.res.res_partner import _tz_get
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from odoo.tools import scan_languages
+from odoo.tools.translate import _
+
 _logger = logging.getLogger(__name__)
 
 
@@ -45,7 +45,8 @@ class SaasPortalServer(models.Model):
     request_scheme = fields.Selection(
         [('http', 'http'), ('https', 'https')], 'Scheme', default='http', required=True)
     verify_ssl = fields.Boolean(
-        'Verify SSL', default=True, help="verify SSL certificates for server-side HTTPS requests, just like a web browser")
+        'Verify SSL', default=True,
+        help="verify SSL certificates for server-side HTTPS requests, just like a web browser")
     request_port = fields.Integer('Request Port', default=80)
     client_ids = fields.One2many(
         'saas_portal.client', 'server_id', string='Clients')
@@ -82,7 +83,8 @@ class SaasPortalServer(models.Model):
         params = {
             'scope': scope,
             'state': simplejson.dumps(state),
-            'redirect_uri': '{scheme}://{saas_server}:{port}{path}'.format(scheme=scheme, port=port, saas_server=self.host, path=path),
+            'redirect_uri': '{scheme}://{saas_server}:{port}{path}'.format(scheme=scheme, port=port,
+                                                                           saas_server=self.host, path=path),
             'response_type': 'token',
             'client_id': client_id,
         }
@@ -218,7 +220,9 @@ class SaasPortalPlan(models.Model):
         'Grace period (days)', help='initial days before expiration')
 
     dbname_template = fields.Char(
-        'DB Names', help='Used for generating client database domain name. Use %i for numbering. Ignore if you use manually created db names', placeholder='crm-%i.odoo.com')
+        'DB Names',
+        help='Used for generating client database domain name. Use %i for numbering. Ignore if you use manually created db names',
+        placeholder='crm-%i.odoo.com')
     server_id = fields.Many2one('saas_portal.server', string='SaaS Server',
                                 ondelete='restrict',
                                 help='User this saas server or choose random')
@@ -230,7 +234,8 @@ class SaasPortalPlan(models.Model):
         ('login', 'Log into just created instance'),
     ], string="Workflow on create", default='login')
     on_create_email_template = fields.Many2one('mail.template',
-                                               default=lambda self: self.env.ref('saas_portal.email_template_create_saas'))
+                                               default=lambda self: self.env.ref(
+                                                   'saas_portal.email_template_create_saas'))
 
     @api.multi
     @api.depends('template_id.state')
@@ -241,6 +246,7 @@ class SaasPortalPlan(models.Model):
             else:
                 plan.state = 'draft'
 
+    ## @ingroup newdatabase
     @api.multi
     def _new_database_vals(self, vals):
         self.ensure_one()
@@ -279,16 +285,21 @@ class SaasPortalPlan(models.Model):
         initial_expiration_datetime = datetime.now()
         trial_expiration_datetime = (initial_expiration_datetime + timedelta(
             hours=trial_hours)).strftime(DEFAULT_SERVER_DATETIME_FORMAT)
-        return trial and trial_expiration_datetime or initial_expiration_datetime.strftime(DEFAULT_SERVER_DATETIME_FORMAT)
+        return trial and trial_expiration_datetime or initial_expiration_datetime.strftime(
+            DEFAULT_SERVER_DATETIME_FORMAT)
 
+    ## @ingroup newdatabase
     @api.multi
     def create_new_database(self, **kwargs):
+        '''入口函数，转调_create_new_database'''
         return self._create_new_database(**kwargs)
 
+    ## @ingroup newdatabase
     @api.multi
     def _create_new_database(self, dbname=None, client_id=None,
                              partner_id=None, user_id=None, notify_user=True,
                              trial=False, support_team_id=None, async=None):
+        '''创建新数据库'''
         self.ensure_one()
         p_client = self.env['saas_portal.client']
         p_server = self.env['saas_portal.server']
@@ -310,7 +321,7 @@ class SaasPortalPlan(models.Model):
                                               ('trial', '=', False)])
             if db_count >= self.maximum_allowed_dbs_per_partner:
                 raise MaximumDBException("Limit of databases for this plan is %(maximum)s reached" % {
-                                         'maximum': self.maximum_allowed_dbs_per_partner})
+                    'maximum': self.maximum_allowed_dbs_per_partner})
         if trial and self.maximum_allowed_trial_dbs_per_partner != 0:
             trial_db_count = p_client.search_count([('partner_id', '=', partner_id),
                                                     ('state',
@@ -320,7 +331,7 @@ class SaasPortalPlan(models.Model):
                                                     ('trial', '=', True)])
             if trial_db_count >= self.maximum_allowed_trial_dbs_per_partner:
                 raise MaximumTrialDBException("Limit of trial databases for this plan is %(maximum)s reached" % {
-                                              'maximum': self.maximum_allowed_trial_dbs_per_partner})
+                    'maximum': self.maximum_allowed_trial_dbs_per_partner})
 
         client_expiration = self._get_expiration(trial)
         vals = {'name': dbname or self.generate_dbname(),
@@ -362,7 +373,7 @@ class SaasPortalPlan(models.Model):
         req, req_kwargs = server._request_server(path='/saas_server/new_database',
                                                  state=state,
                                                  client_id=client_id,
-                                                 scope=scope,)
+                                                 scope=scope, )
         res = requests.Session().send(req, **req_kwargs)
         if res.status_code != 200:
             raise Warning(_('Error on request: %s\nReason: %s \n Message: %s') % (
@@ -662,7 +673,7 @@ class SaasPortalDatabase(models.Model):
             }
         }
 
-
+##  @todo 从订单更新有效期
 class SaasPortalClient(models.Model):
     _name = 'saas_portal.client'
     _description = 'Client'
@@ -699,7 +710,7 @@ class SaasPortalClient(models.Model):
     _track = {
         'expired': {
             'saas_portal.mt_expired':
-            lambda self, cr, uid, obj, ctx=None: obj.expired
+                lambda self, cr, uid, obj, ctx=None: obj.expired
         }
     }
 
@@ -737,7 +748,9 @@ class SaasPortalClient(models.Model):
         notification_delta = int(self.env['ir.config_parameter'].sudo(
         ).get_param('saas_portal.expiration_notify_in_advance', '0'))
         if notification_delta > 0:
-            records = self.search([('expiration_datetime', '<=', (datetime.now() + timedelta(days=notification_delta)).strftime(DEFAULT_SERVER_DATETIME_FORMAT)),
+            records = self.search([('expiration_datetime', '<=',
+                                    (datetime.now() + timedelta(days=notification_delta)).strftime(
+                                        DEFAULT_SERVER_DATETIME_FORMAT)),
                                    ('notification_sent', '=', False)])
             records.write({'notification_sent': True})
             for record in records:
@@ -763,7 +776,8 @@ class SaasPortalClient(models.Model):
     def write(self, values):
         if 'expiration_datetime' in values:
             payload = {
-                'params': [{'key': 'saas_client.expiration_datetime', 'value': values['expiration_datetime'], 'hidden': True}],
+                'params': [
+                    {'key': 'saas_client.expiration_datetime', 'value': values['expiration_datetime'], 'hidden': True}],
             }
 
             for record in self:
@@ -824,7 +838,7 @@ class SaasPortalClient(models.Model):
             now = datetime.now()
             delta = timedelta(hours=expiration)
             vals['expiration_datetime'] = (
-                now + delta).strftime(DEFAULT_SERVER_DATETIME_FORMAT)
+                    now + delta).strftime(DEFAULT_SERVER_DATETIME_FORMAT)
 
         client = p_client.create(vals)
         client_id = client.client_id
@@ -852,7 +866,7 @@ class SaasPortalClient(models.Model):
         req, req_kwargs = server._request_server(path='/saas_server/new_database',
                                                  state=state,
                                                  client_id=client_id,
-                                                 scope=scope,)
+                                                 scope=scope, )
         res = requests.Session().send(req, **req_kwargs)
 
         if not res.ok:

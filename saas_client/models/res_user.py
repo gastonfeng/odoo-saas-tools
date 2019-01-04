@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from odoo import SUPERUSER_ID as SI
 from odoo import api
 from odoo import exceptions
@@ -7,6 +8,7 @@ from odoo.addons.saas_base.exceptions import SuspendedDBException
 
 
 class ResUsers(models.Model):
+    '''用户添加授权记录'''
     _name = 'res.users'
     _inherit = 'res.users'
 

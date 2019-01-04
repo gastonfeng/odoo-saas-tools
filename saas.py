@@ -17,7 +17,6 @@ import re
 import os
 import psycopg2
 import requests
-import resource
 import signal
 import subprocess
 import time
@@ -52,7 +51,7 @@ settings_group.add_argument('--suffix', dest='suffix', default=ODOO_VERSION, hel
 settings_group.add_argument('--odoo-script', dest='odoo_script', help='Path to odoo-server', default='./odoo-server')
 settings_group.add_argument('--odoo-config', dest='odoo_config', help='Path to odoo configuration file')
 settings_group.add_argument('--odoo-data-dir', dest='odoo_data_dir', help='Path to odoo data dir', default=None)
-settings_group.add_argument('--odoo-xmlrpc-port', dest='xmlrpc_port', default='8069', help='Port to run odoo temporarly')
+settings_group.add_argument('--odoo-xmlrpc-port', dest='xmlrpc_port', default='9011', help='Port to run odoo temporarly')
 settings_group.add_argument('--odoo-longpolling-port', dest='longpolling_port', default='8072', help='Port to run odoo temporarly')
 settings_group.add_argument('--use-existed-odoo', dest='use_existed_odoo', action='store_true', default=False, help='Wait infinitly for 8069 port. Usefull in docker environment.')
 settings_group.add_argument('--local-xmlrpc-port', dest='local_xmlrpc_port', default=None, help='Port to be used for server-wide requests')

@@ -1,0 +1,93 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * saas_portal_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-01 06:23+0000\n"
+"PO-Revision-Date: 2019-01-01 06:23+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Expired"
+msgstr "已过期"
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "Apply"
+msgstr "应用"
+
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid ""
+"Be sure that the new domain name is point to our server before you apply"
+msgstr "确认新的域名已指向服务器"
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "Domain name"
+msgstr "域名"
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.portal_instances
+#: model:ir.ui.view,arch_db:saas_portal_portal.portal_my_home_saas
+#: model:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Instances"
+msgstr "实例"
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "Look up for IP address of our server as such:"
+msgstr "查找服务器的IP地址按照格式："
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid ""
+"Map your new name to the IP address on your DNS server. Use the A record for"
+" that."
+msgstr "在DNS服务器映射新域名到这个IP地址。 使用A记录。"
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Name"
+msgstr "名称"
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Plan"
+msgstr "计划"
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "There are currently no instances for your account."
+msgstr "您的帐户目前没有实例。"
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "To work with the new domain you should do the following:"
+msgstr "使用新域名您应该做到以下几点："
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.portal_my_instances
+msgid "Valid Until"
+msgstr "有效期"
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "Warning:"
+msgstr "警告:"
+
+#. module: saas_portal_portal
+#: model:ir.ui.view,arch_db:saas_portal_portal.change_domain
+msgid "your-new-domain-name"
+msgstr "您的新的域名"

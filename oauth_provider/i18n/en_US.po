@@ -1,0 +1,109 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* oauth_provider
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-01 06:20+0000\n"
+"PO-Revision-Date: 2019-01-01 06:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token_token
+msgid "Access Token"
+msgstr "Access Token"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token_application_id
+msgid "Application"
+msgstr "Application"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token_create_uid
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application_create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token_create_date
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application_create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application_client_id
+msgid "Database UUID"
+msgstr "Database UUID"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token_display_name
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application_display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token_expires
+msgid "Expires"
+msgstr "Expires"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token_id
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application_id
+msgid "ID"
+msgstr "ID"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token___last_update
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application___last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token_write_uid
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application_write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token_write_date
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application_write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token_scope
+msgid "Scope"
+msgstr "Scope"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_application_token_ids
+msgid "Tokens"
+msgstr "Tokens"
+
+#. module: oauth_provider
+#: model:ir.model.fields,field_description:oauth_provider.field_oauth_access_token_user_id
+msgid "User"
+msgstr "User"
+
+#. module: oauth_provider
+#: sql_constraint:oauth.application:0
+msgid "client_id should be unique!"
+msgstr "client_id should be unique!"
+
+#. module: oauth_provider
+#: model:ir.model,name:oauth_provider.model_oauth_access_token
+msgid "oauth.access_token"
+msgstr "oauth.access_token"
+
+#. module: oauth_provider
+#: model:ir.model,name:oauth_provider.model_oauth_application
+msgid "oauth.application"
+msgstr "oauth.application"
+

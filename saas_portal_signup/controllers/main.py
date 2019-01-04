@@ -1,9 +1,10 @@
 import re
 
 import odoo
+from odoo.addons import auth_signup
 from odoo import http
 from odoo.http import request
-from odoo.addons import auth_signup
+
 
 
 class AuthSignupHome(auth_signup.controllers.main.AuthSignupHome):

@@ -12,6 +12,7 @@ from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 class SaaSWebSettingsDashboard(WebSettingsDashboard):
 
     @http.route('/web_settings_dashboard/data', type='json', auth='user')
+    ##  @ingroup url
     def web_settings_dashboard_data(self, **kw):
 
         result = super(SaaSWebSettingsDashboard, self).web_settings_dashboard_data(**kw)

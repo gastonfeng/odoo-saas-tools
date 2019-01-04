@@ -1,0 +1,404 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* saas_portal_demo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-03 02:40+0000\n"
+"PO-Revision-Date: 2019-01-03 02:40+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_portal_demo
+#: model:mail.template,body_html:saas_portal_demo.email_template_create_saas_for_demo
+msgid "\n"
+"\n"
+"            <p>\n"
+"                Hello ${object.partner_id.name},<br />\n"
+"                Your new ${object.plan_id.name} instance is ready.<br />\n"
+"                % if ctx['user'].partner_id.signup_valid:\n"
+"                        In order to get access to the instance, please accept an invitation to portal by clicking on the link below.\n"
+"                        After you have set your password you will be redirected to a page with a list of your instances. Just click on the name to open and starting testing.\n"
+"\n"
+"                        <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"                            <div style=\"text-align: center; margin-top: 16px;\">\n"
+"                                 <a href=\"${ctx['user'].signup_url}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Accept invitation to portal</a>\n"
+"                            </div>\n"
+"                        </div>\n"
+"                % else:\n"
+"                        Here is the link to access:<br />\n"
+"                        <a href=\"${object.public_url}\">${object.public_url}</a><br />\n"
+"                        <p>You can login using your email and password provided when signing up.</p>\n"
+"                % endif\n"
+"            </p>\n"
+"            <p>\n"
+"		Trial ends on ${object.expiration_datetime}.<br />\n"
+"            </p>\n"
+"            <p>Best regards,</p>\n"
+"\n"
+"            "
+msgstr "\n"
+"\n"
+"            <p>\n"
+"                Hello ${object.partner_id.name},<br />\n"
+"                Your new ${object.plan_id.name} instance is ready.<br />\n"
+"                % if ctx['user'].partner_id.signup_valid:\n"
+"                        In order to get access to the instance, please accept an invitation to portal by clicking on the link below.\n"
+"                        After you have set your password you will be redirected to a page with a list of your instances. Just click on the name to open and starting testing.\n"
+"\n"
+"                        <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"                            <div style=\"text-align: center; margin-top: 16px;\">\n"
+"                                 <a href=\"${ctx['user'].signup_url}\" style=\"padding: 5px 10px; font-size: 12px; line-height: 18px; color: #FFFFFF; border-color:#875A7B; text-decoration: none; display: inline-block; margin-bottom: 0px; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; white-space: nowrap; background-image: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius:3px\">Accept invitation to portal</a>\n"
+"                            </div>\n"
+"                        </div>\n"
+"                % else:\n"
+"                        Here is the link to access:<br />\n"
+"                        <a href=\"${object.public_url}\">${object.public_url}</a><br />\n"
+"                        <p>You can login using your email and password provided when signing up.</p>\n"
+"                % endif\n"
+"            </p>\n"
+"            <p>\n"
+"		Trial ends on ${object.expiration_datetime}.<br />\n"
+"            </p>\n"
+"            <p>Best regards,</p>\n"
+"\n"
+"            "
+
+#. module: saas_portal_demo
+#: model:product.attribute.value,name:saas_portal_demo.product_attribute_value_10
+msgid "10.0"
+msgstr "10.0"
+
+#. module: saas_portal_demo
+#: model:product.attribute.value,name:saas_portal_demo.product_attribute_value_11
+msgid "11.0"
+msgstr "11.0"
+
+#. module: saas_portal_demo
+#: model:product.attribute.value,name:saas_portal_demo.product_attribute_value_8
+msgid "8.0"
+msgstr "8.0"
+
+#. module: saas_portal_demo
+#: model:product.attribute.value,name:saas_portal_demo.product_attribute_value_9
+msgid "9.0"
+msgstr "9.0"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "<b>Also available for</b><br/>"
+msgstr "<b>Also available for</b><br/>"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_author
+msgid "Author"
+msgstr "Author"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.view_server_form
+msgid "Create Demo Template DBs"
+msgstr "Create Demo Template DBs"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_create_uid
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module_create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_create_date
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module_create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_currency
+msgid "Currency"
+msgstr "Currency"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.view_plans_form
+msgid "Demo Hidden Modules"
+msgstr "Demo Hidden Modules"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.view_plans_form
+msgid "Demo Modules"
+msgstr "Demo Modules"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,help:saas_portal_demo.field_product_product_module_name
+#: model:ir.model.fields,help:saas_portal_demo.field_product_template_module_name
+msgid "Demo module technical name"
+msgstr "Demo module technical name"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_demo_plan_id
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module_demo_plan_id
+msgid "Demo plan where the module intended to be installed"
+msgstr "Demo plan where the module intended to be installed"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_display_name
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module_display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.view_server_form
+msgid "Generate Demo Plans"
+msgstr "Generate Demo Plans"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_id
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module_id
+msgid "ID"
+msgstr "ID"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_icon
+msgid "Icon"
+msgstr "Icon"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_icon_attachment_id
+msgid "Icon Attachment"
+msgstr "Icon Attachment"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.portal_my_instances
+msgid "Instance"
+msgstr "Instance"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.portal_my_home_menu_demo
+msgid "Instances"
+msgstr "Instances"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module___last_update
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module___last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_write_uid
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module_write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_write_date
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module_write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_shortdesc
+msgid "Module Name"
+msgstr "Module Name"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_product_product_module_name
+#: model:ir.model.fields,field_description:saas_portal_demo.field_product_template_module_name
+msgid "Module name"
+msgstr "Module name"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_plan_demo_plan_hidden_module_ids
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_plan_demo_plan_module_ids
+msgid "Modules"
+msgstr "Modules"
+
+#. module: saas_portal_demo
+#: model:ir.actions.act_url,name:saas_portal_demo.action_open_my_instances
+msgid "My Instances"
+msgstr "My Instances"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "Odoo Saas Tools"
+msgstr "Odoo Saas Tools"
+
+#. module: saas_portal_demo
+#: model:product.attribute,name:saas_portal_demo.odoo_version_product_attribute
+msgid "Odoo Version"
+msgstr "Odoo Version"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_product_product_variant_plan_id
+msgid "Plan for Variant"
+msgstr "Plan for Variant"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "Powered by"
+msgstr "Powered by"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_price
+msgid "Price"
+msgstr "Price"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "Prices are quoted without dependencies"
+msgstr "Prices are quoted without dependencies"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_product_product
+msgid "Product"
+msgstr "Product"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.view_server_form
+msgid "Restart Server"
+msgstr "Restart Server"
+
+#. module: saas_portal_demo
+#: model:ir.actions.server,name:saas_portal_demo.ir_cron_restart_server_ir_actions_server
+#: model:ir.cron,cron_name:saas_portal_demo.ir_cron_restart_server
+#: model:ir.cron,name:saas_portal_demo.ir_cron_restart_server
+msgid "Restart server with demo"
+msgstr "Restart server with demo"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.product_product_saas
+msgid "SaaS Demo"
+msgstr "SaaS Demo"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_saas_portal_server
+msgid "SaaS Server"
+msgstr "SaaS Server"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_product_product_saas_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_product_template_saas_demo
+msgid "Saas Demo"
+msgstr "Saas Demo"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_summary
+msgid "Summary"
+msgstr "Summary"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_technical_name
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_hidden_demo_plan_module_technical_name
+msgid "Technical Name"
+msgstr "Technical Name"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "The following modules are included in this demonstration:"
+msgstr "The following modules are included in this demonstration:"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,help:saas_portal_demo.field_saas_portal_plan_demo_plan_hidden_module_ids
+#: model:ir.model.fields,help:saas_portal_demo.field_saas_portal_plan_demo_plan_module_ids
+msgid "The modules that should be in this demo plan"
+msgstr "The modules that should be in this demo plan"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.portal_my_home_demo
+msgid "There are currently no SaaS instances for your account."
+msgstr "There are currently no SaaS instances for your account."
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.portal_my_instances
+msgid "There are currently no instances for your account."
+msgstr "There are currently no instances for your account."
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,help:saas_portal_demo.field_product_product_saas_demo
+#: model:ir.model.fields,help:saas_portal_demo.field_product_template_saas_demo
+msgid "This product template is used for saas demo"
+msgstr "This product template is used for saas demo"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.demo_product
+msgid "Try trial"
+msgstr "Try trial"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.view_server_form
+msgid "Update Repositories"
+msgstr "Update Repositories"
+
+#. module: saas_portal_demo
+#: model:ir.actions.server,name:saas_portal_demo.ir_cron_update_repositories_ir_actions_server
+#: model:ir.cron,cron_name:saas_portal_demo.ir_cron_update_repositories
+#: model:ir.cron,name:saas_portal_demo.ir_cron_update_repositories
+msgid "Update repositories with demo"
+msgstr "Update repositories with demo"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.view_server_form
+msgid "Update templates"
+msgstr "Update templates"
+
+#. module: saas_portal_demo
+#: model:ir.actions.server,name:saas_portal_demo.ir_cron_update_templates_ir_actions_server
+#: model:ir.cron,cron_name:saas_portal_demo.ir_cron_update_templates
+#: model:ir.cron,name:saas_portal_demo.ir_cron_update_templates
+msgid "Update templates for demo"
+msgstr "Update templates for demo"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.portal_my_instances
+msgid "Valid Until"
+msgstr "Valid Until"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.portal_my_home_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.portal_my_instances
+msgid "Your Instances"
+msgstr "Your Instances"
+
+#. module: saas_portal_demo
+#: model:mail.template,subject:saas_portal_demo.email_template_create_saas_for_demo
+msgid "Your demo instance for ${object.plan_id.name}"
+msgstr "Your demo instance for ${object.plan_id.name}"
+
+#. module: saas_portal_demo
+#: model:ir.ui.view,arch_db:saas_portal_demo.demo_addons
+msgid "by"
+msgstr "by"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_saas_portal_database
+msgid "saas_portal.database"
+msgstr "saas_portal.database"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_saas_portal_demo_plan_module
+msgid "saas_portal.demo_plan_module"
+msgstr "saas_portal.demo_plan_module"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_saas_portal_hidden_demo_plan_module
+msgid "saas_portal.hidden_demo_plan_module"
+msgstr "saas_portal.hidden_demo_plan_module"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_saas_portal_plan
+msgid "saas_portal.plan"
+msgstr "saas_portal.plan"
+
+#. module: saas_portal_demo
+#: model:ir.model.fields,field_description:saas_portal_demo.field_saas_portal_demo_plan_module_url
+msgid "url"
+msgstr "url"
+
+#. module: saas_portal_demo
+#: model:ir.model,name:saas_portal_demo.model_product_template
+msgid "产品模板"
+msgstr "产品模板"
+

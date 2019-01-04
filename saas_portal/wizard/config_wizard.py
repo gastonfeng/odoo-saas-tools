@@ -162,7 +162,11 @@ class SaasPortalCreateClient(models.TransientModel):
     def update_partner(self):
         if self.user_id:
             self.partner_id = self.user_id.partner_id
-
+    #   \addtogroup newdatabase
+    #   @{
+    #   SaasPortalCreateClient#apply
+    #   调用plan.create_new_database
+    #   @}
     @api.multi
     def apply(self):
         self.ensure_one()

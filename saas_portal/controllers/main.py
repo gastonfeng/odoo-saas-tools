@@ -1,15 +1,19 @@
-from urllib.parse import urlencode
+# -*- coding: utf-8 -*-
+import logging
 from ast import literal_eval
+from urllib.parse import urlencode
+
+import simplejson
+import werkzeug
+from odoo.addons.saas_base.exceptions import MaximumDBException, MaximumTrialDBException
+from odoo.addons.web.controllers.main import Home, ensure_db
+
 import odoo
 from odoo import exceptions
-from odoo.tools.translate import _
 from odoo import http
 from odoo.http import request
-from odoo.addons.saas_base.exceptions import MaximumDBException, MaximumTrialDBException
-import werkzeug
-import simplejson
+from odoo.tools.translate import _
 
-import logging
 _logger = logging.getLogger(__name__)
 
 
@@ -20,12 +24,20 @@ class SignupError(Exception):
 class SaasPortal(http.Controller):
 
     @http.route(['/saas_portal/trial_check'], type='json', auth='public', website=True)
+    ##  @ingroup url
     def trial_check(self, **post):
         if self.exists_database(post['dbname']):
             return {"error": {"msg": "database already taken"}}
         return {"ok": 1}
 
+    #   \addtogroup newdatabase
+    #   @{
+    #   SaasPortal#add_new_client    /saas_portal/add_new_client?plan_id=x&dbname=&trial=
+    #   如果未登录账号，转/web/signup
+    #   调用plan.create_new_database
+    #   @}
     @http.route(['/saas_portal/add_new_client'], type='http', auth='public', website=True)
+    ##  @ingroup url
     def add_new_client(self, redirect_to_signup=False, **post):
         uid = request.session.uid
         if not uid:
@@ -34,7 +46,7 @@ class SaasPortal(http.Controller):
             query = {'redirect': redirect}
             return http.local_redirect(path=url, query=query)
 
-        dbname = self.get_full_dbname(post.get('dbname'))
+        dbname = post.get('dbname')
         user_id = request.session.uid
         partner_id = None
         if user_id:
@@ -46,7 +58,7 @@ class SaasPortal(http.Controller):
             res = plan.create_new_database(dbname=dbname,
                                            user_id=user_id,
                                            partner_id=partner_id,
-                                           trial=trial,)
+                                           trial=trial, )
         except MaximumDBException:
             _logger.info("MaximumDBException")
             url = request.env['ir.config_parameter'].sudo().get_param('saas_portal.page_for_maximumdb', '/')
@@ -59,6 +71,7 @@ class SaasPortal(http.Controller):
         return werkzeug.utils.redirect(res.get('url'))
 
     @http.route(['/saas_portal/rename_client'], type='http', auth='user', website=True)
+    ##  @ingroup url
     def rename_client(self, **post):
         client_id = int(post.get('client_id'))
         new_domain_name = post.get('dbname')
@@ -100,6 +113,7 @@ class SaasPortal(http.Controller):
         return odoo.service.db.exp_db_exist(full_dbname)
 
     @http.route(['/publisher-warranty/'], type='http', auth='public', website=True)
+    ##  @ingroup url
     def publisher_warranty(self, **post):
         # check addons/mail/update.py::_get_message for arg0 value
         arg0 = post.get('arg0')

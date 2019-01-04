@@ -1,6 +1,7 @@
 from odoo import models, fields, api
 
 
+
 class SaasPortalPlan(models.Model):
     _inherit = 'saas_portal.plan'
 
@@ -18,8 +19,16 @@ class SaasPortalPlan(models.Model):
                                           'saas_plan_id',
                                           'Product variants')
 
+    ##  \addtogroup    newdatabase    创建数据库
+    ##  @{
+    ## SaasPortalPlan#_new_database_vals:继承函数，创建分析账户，返回分析账户id
+    ##  @}
     @api.multi
+    ##  @todo    创建合同明细
+    ## @ingroup newdatabase
     def _new_database_vals(self, vals):
+        '''继承函数，创建分析账户，返回分析账户id
+        '''
         vals = super(SaasPortalPlan, self)._new_database_vals(vals)
 
         contract = self.env['account.analytic.account'].sudo().create({
@@ -30,6 +39,7 @@ class SaasPortalPlan(models.Model):
 
         vals['contract_id'] = contract.id
         return vals
+
 
 
 class SaasPortalClient(models.Model):

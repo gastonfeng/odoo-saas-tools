@@ -21,6 +21,7 @@ class CustomerPortal(CustomerPortal):
         return values
 
     @http.route(['/my/instances', '/my/instances/page/<int:page>'], type='http', auth="user", website=True)
+    ##  @ingroup url
     def portal_my_instances(self, page=1, **kw):
         values = self._prepare_portal_layout_values()
         partner = request.env.user.partner_id
@@ -33,6 +34,7 @@ class CustomerPortal(CustomerPortal):
         return request.render("saas_portal_portal.portal_my_instances", values)
 
     @http.route("/my/domain/<int:instance_id>", type='http', auth="user", website=True)
+    ##  @ingroup url
     def change_domain(self, instance_id, **post):
         instance = request.env['saas_portal.client'].sudo().browse(instance_id)
         ICPsudo = request.env['ir.config_parameter'].sudo()

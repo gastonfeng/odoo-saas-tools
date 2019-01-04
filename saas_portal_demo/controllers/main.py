@@ -19,6 +19,7 @@ def signup_redirect():
 class SaasPortalDemo(SaasPortal):
 
     @http.route(['/demo/<string:version>/<string:plan_url>/'], type='http', auth='public', website=True)
+    ##  @ingroup url
     def show_plan(self, version, plan_url, **post):
         domain = [('odoo_version', '=', version), ('page_url', '=', plan_url),
                   ('state', '=', 'confirmed')]
@@ -33,6 +34,7 @@ class SaasPortalDemo(SaasPortal):
 class WebsiteSaleCustom(WebsiteSale):
 
     @http.route(['/shop/product/<model("product.template"):product>'], type='http', auth="public", website=True)
+    ##  @ingroup url
     def product(self, product, category='', search='', **kwargs):
         version = kwargs.get('version')
         attr_id = request.env.ref(
@@ -78,6 +80,7 @@ class WebsiteAccount(CustomerPortal):
     #
 
     @http.route(['/my/instances'], type='http', auth="user", website=True)
+    ##  @ingroup url
     def portal_my_instances(self, **kw):
         values = self._prepare_portal_layout_values()
         partner = request.env.user.partner_id

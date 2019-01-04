@@ -1,0 +1,50 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_portal_signup_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-02 02:43+0000\n"
+"PO-Revision-Date: 2019-01-02 10:45+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+
+#. module: saas_portal_signup_custom
+#: model:ir.ui.view,arch_db:saas_portal_signup_custom.signup_fields_custom
+msgid "Country"
+msgstr "国家"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model.fields,field_description:saas_portal_signup_custom.field_saas_portal_plan_dbname_prefix
+msgid "DB Names prefix"
+msgstr "服务名前缀"
+
+#. module: saas_portal_signup_custom
+#: model:ir.ui.view,arch_db:saas_portal_signup_custom.signup_fields_custom
+msgid "Product"
+msgstr "产品"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model,name:saas_portal_signup_custom.model_saas_portal_plan
+msgid "saas_portal.plan"
+msgstr ""
+
+#. module: saas_portal_signup_custom
+#: model:ir.model.fields,help:saas_portal_signup_custom.field_saas_portal_plan_dbname_prefix
+msgid ""
+"specify this field if you want to create several databases at once using "
+"saas_portal_signup module"
+msgstr "如果要一次创建多个数据库, 请指定此字段"
+
+#. module: saas_portal_signup_custom
+#: model:ir.model,name:saas_portal_signup_custom.model_product_template
+msgid "产品模板"
+msgstr ""

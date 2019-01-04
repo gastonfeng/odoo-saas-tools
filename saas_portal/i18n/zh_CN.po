@@ -1,0 +1,1390 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* saas_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-30 04:23+0000\n"
+"PO-Revision-Date: 2018-12-30 13:29+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+
+#. module: saas_portal
+#: model:mail.template,body_html:saas_portal.email_template_has_expired_notify
+msgid ""
+"\n"
+"\n"
+"            <p>\n"
+"            % if object.trial:\n"
+"            Your trial service ${object.name} has expired\n"
+"            % endif\n"
+"            % if object.block_on_expiration:\n"
+"            and blocked!\n"
+"            % else:\n"
+"            you have to pay in order to continue using the service!\n"
+"            % endif\n"
+"            </p>\n"
+"\n"
+"            "
+msgstr ""
+
+#. module: saas_portal
+#: model:mail.template,body_html:saas_portal.email_template_expiration_notify
+msgid ""
+"\n"
+"\n"
+"            <p>\n"
+"            Less than ${ctx[\"days\"]} day(s) left before expiration.\n"
+"            </p>\n"
+"\n"
+"            "
+msgstr ""
+"\n"
+"\n"
+"            <p>\n"
+"            还有 ${ctx[\"days\"]} 天到期.\n"
+"            </p>\n"
+"\n"
+"            "
+
+#. module: saas_portal
+#: model:mail.template,body_html:saas_portal.email_template_storage_exceed
+msgid ""
+"\n"
+"\n"
+"            <p>\n"
+"            Storage limit ${object.total_storage_limit} of ${object.name} "
+"has been exceeded.\n"
+"            Contact your system administrator in order to resume using your "
+"service.\n"
+"            </p>\n"
+"\n"
+"            "
+msgstr ""
+
+#. module: saas_portal
+#: model:mail.template,body_html:saas_portal.email_template_create_saas
+msgid ""
+"\n"
+"\n"
+"            <p>Web:\n"
+"            <a href=\"${object.public_url}\">${object.public_url}</a>\n"
+"            </p>\n"
+"\n"
+"            "
+msgstr ""
+
+#. module: saas_portal
+#: model:mail.template,body_html:saas_portal.email_template_expiration_datetime_updated
+msgid ""
+"\n"
+"\n"
+"            <p>You expiration date is now: ${object.expiration_datetime}</"
+"p>\n"
+"            <p>${format_tz(object.expiration_datetime, tz=object.partner_id."
+"tz, context={'lang':object.partner_id.lang})}</p>\n"
+"            "
+msgstr ""
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid "Access rights"
+msgstr "访问权限"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_action
+msgid "Action"
+msgstr "活动"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_active
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_edit_database_active_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_active
+msgid "Active"
+msgstr "激活"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_edit_database_active_model
+msgid "Active Model"
+msgstr ""
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid "Addons"
+msgstr "模块"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid "Affected Database(s)"
+msgstr "相关数据库"
+
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_form
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_tree
+msgid "Are you sure to delete this database?"
+msgstr "确认删除此数据库?"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.batch_delete_wizard_view_form
+msgid "Are you sure?"
+msgstr "您确定吗?"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_async_creation
+msgid "Asynchronous"
+msgstr "异步"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_create_client_async_creation
+msgid "Asynchronous creation of client base"
+msgstr "异步创建客户端"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_duplicate_client_client_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_rename_database_client_id
+msgid "Base Client"
+msgstr "客户"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_res_config_settings_base_saas_domain
+msgid "Base SaaS domain"
+msgstr "域名"
+
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.batch_delete_wizard_view_form
+msgid "Batch delete"
+msgstr "批量删除"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_block_on_expiration
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_block_on_expiration
+msgid "Block clients on expiration"
+msgstr "逾期禁止客户"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_block_on_storage_exceed
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_block_on_storage_exceed
+msgid "Block clients on storage exceed"
+msgstr "存储超限禁止客户"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.batch_delete_wizard_view_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: saas_portal
+#: selection:saas_portal.client,state:0 selection:saas_portal.database,state:0
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: saas_portal
+#: selection:saas_portal.plan,lang:0
+msgid "Catalan / Català"
+msgstr ""
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_rename_database_view_form
+msgid "Change Domain"
+msgstr "更该域名"
+
+#. module: saas_portal
+#: model:ir.model,name:saas_portal.model_saas_portal_client
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_batch_delete_wizard_client_ids
+msgid "Client"
+msgstr "客户"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_oauth_application_client_db_ids
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_client_db_ids
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_client_db_ids
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_client_db_ids
+#: model:ir.ui.view,arch_db:saas_portal.oauth_application_form
+msgid "Client Database"
+msgstr "客户数据库"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+#: model:ir.ui.view,arch_db:saas_portal.view_server_form
+msgid "Client Settings"
+msgstr "客户设置"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_clients
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_client_ids
+#: model:ir.ui.menu,name:saas_portal.menu_clients
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_form
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_tree
+msgid "Clients"
+msgstr "客户"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_create_client_view_form
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_duplicate_client_view_form
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_edit_database_view_form
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_rename_database_view_form
+msgid "Close"
+msgstr "关闭"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid ""
+"Comma-separated list of addons to Update, Install or Uninstall, e.g. "
+"<em>point_of_sale,website_sale</em>"
+msgstr ""
+",分隔模块名列表升级,安装或卸载,例如<em>point_of_sale,website_sale</em>"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid ""
+"Comma-separated list of references to res.groups, e.g. <em>base."
+"group_sale_manager,stock.group_stock_manager</em>."
+msgstr ""
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid "Commands"
+msgstr "命令"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_fix_config_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_number_of_records_line_config_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_param_config_id
+msgid "Config"
+msgstr "配置"
+
+#. module: saas_portal
+#: model:ir.ui.menu,name:saas_portal.menu_saas_portal_config
+msgid "Configuration"
+msgstr "配置"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_form
+#: selection:saas.config,action:0
+msgid "Configure"
+msgstr "配置"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.act_configure_clients
+msgid "Configure Clients"
+msgstr "客户配置"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid "Configure Database"
+msgstr "数据库配置"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_updb
+msgid "Configure Databases"
+msgstr "数据库配置"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_tree
+msgid "Configure client database"
+msgstr "客户数据库配置"
+
+#. module: saas_portal
+#: selection:saas_portal.plan,state:0
+msgid "Confirmed"
+msgstr "确认"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_saas_portal_client_filter
+msgid "Contact"
+msgstr "合同"
+
+#. module: saas_portal
+#: code:addons/saas_portal/models/saas_portal.py:569
+#, python-format
+msgid "Could not backup database; please check your logs"
+msgstr "不能备份数据库,请检查日志"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_create_client_view_form
+msgid "Create"
+msgstr "创建"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+msgid "Create Client"
+msgstr "创建客户"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_duplicate_client
+msgid "Create More Like This"
+msgstr "创建此格式链接"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_create_client
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_create_client_view_form
+msgid "Create client"
+msgstr "创建客户"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+msgid "Create template DB"
+msgstr "创建模版"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_fix_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_number_of_records_line_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_param_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_batch_delete_wizard_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_duplicate_client_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_edit_database_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_rename_database_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_create_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_support_team_create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_fix_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_number_of_records_line_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_param_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_batch_delete_wizard_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_duplicate_client_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_edit_database_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_rename_database_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_create_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_support_team_create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_server_form
+msgid "Credentials for rpc"
+msgstr "rpc认证"
+
+#. module: saas_portal
+#: model:mail.template,subject:saas_portal.email_template_create_saas
+msgid "Credentials:"
+msgstr "认证:"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_dbname_template
+msgid "DB Names"
+msgstr "数据库名称"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_database_ids
+msgid "Database"
+msgstr "数据库"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_duplicate_client_name
+#: model:ir.ui.view,arch_db:saas_portal.view_databases_filter
+#: model:ir.ui.view,arch_db:saas_portal.view_saas_portal_client_filter
+msgid "Database Name"
+msgstr "数据库名称"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_client_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_client_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_client_id
+msgid "Database UUID"
+msgstr "数据库UUID"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_name
+msgid "Database name"
+msgstr "数据库名称"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.batch_delete_wizard_view_form
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_form
+#: selection:saas.config,action:0
+msgid "Delete"
+msgstr "删除"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.act_delete_batch_clients
+msgid "Delete Clients"
+msgstr "删除客户"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_tree
+msgid "Delete client database"
+msgstr "删除客户数据库"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_view_batch_delete_wizard
+msgid "Delete databases"
+msgstr "删除数据库"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+msgid "Delete template DB"
+msgstr "删除模版"
+
+#. module: saas_portal
+#: selection:saas_portal.client,state:0 selection:saas_portal.database,state:0
+msgid "Deleted"
+msgstr "已删除"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_fix_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_number_of_records_line_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_param_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_batch_delete_wizard_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_duplicate_client_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_edit_database_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_rename_database_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_display_name
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_support_team_display_name
+msgid "Display Name"
+msgstr "显示名"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_number_of_records_line_domain
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid "Domain"
+msgstr "域名"
+
+#. module: saas_portal
+#: selection:saas_portal.plan,state:0
+msgid "Draft"
+msgstr "草稿"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_duplicate_client_view_form
+msgid "Duplicate"
+msgstr "复制"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_duplicate_client_view_form
+msgid "Duplicate client"
+msgstr "复制客户"
+
+#. module: saas_portal
+#: selection:saas.config,action:0
+msgid "Edit"
+msgstr "编辑"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_edit_database
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_edit_database_view_form
+msgid "Edit Database"
+msgstr "编辑数据库"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_edit_database_edit_database_url
+msgid "Edit Database Url"
+msgstr "编辑数据库URL"
+
+#. module: saas_portal
+#: code:addons/saas_portal/models/saas_portal.py:436
+#, python-format
+msgid ""
+"Error on parsing response: %s\n"
+"%s"
+msgstr "响应错误%s\n%s"
+
+#. module: saas_portal
+#: code:addons/saas_portal/models/saas_portal.py:368
+#: code:addons/saas_portal/models/saas_portal.py:431
+#, python-format
+msgid ""
+"Error on request: %s\n"
+"Reason: %s \n"
+" Message: %s"
+msgstr "请求错误：%s\n原因：%s\n信息：%s\n"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid "Error pages"
+msgstr "错误页"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid "Execute"
+msgstr "执行"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_expiration_datetime
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_duplicate_client_expiration
+msgid "Expiration"
+msgstr "期限"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_expiration
+msgid "Expiration (hours)"
+msgstr "期限(小时)"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_res_config_settings_expiration_notify_in_advance
+msgid "Expiration Notify In Advance"
+msgstr "到期提醒"
+
+#. module: saas_portal
+#: model:mail.template,subject:saas_portal.email_template_expiration_datetime_updated
+msgid "Expiration updated"
+msgstr "期限已更新"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_expired
+msgid "Expired"
+msgstr "已过期"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid "Features"
+msgstr "特性"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_fix_ids
+msgid "Fixes"
+msgstr "修复"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_grace_period
+msgid "Grace period (days)"
+msgstr "宽限期(天)"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_access_owner_add
+msgid "Grant access to Owner"
+msgstr "授予所有者访问权限"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_saas_portal_client_filter
+msgid "Group By"
+msgstr "分组"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_param_hidden
+msgid "Hidden parameter"
+msgstr "隐藏参数"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_host
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_host
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_host
+msgid "Host"
+msgstr "主机"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_saas_portal_client_filter
+#: selection:saas_portal.client,state:0 selection:saas_portal.database,state:0
+msgid "In Progress"
+msgstr "运行中"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_max_users
+msgid "Initial Max users"
+msgstr "初始最大用户"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_trial_hours
+msgid "Initial period for trial (hours)"
+msgstr "试用初始时长(小时)"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_install_addons
+msgid "Install Addons"
+msgstr "安装模块"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_demo
+msgid "Install Demo Data"
+msgstr "安装示例数据"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_oauth_application_last_connection
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_last_connection
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_last_connection
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_last_connection
+msgid "Last Connection"
+msgstr "连接丢失"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_fix___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_number_of_records_line___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_param___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_batch_delete_wizard___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_duplicate_client___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_edit_database___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_rename_database___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server___last_update
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_support_team___last_update
+msgid "Last Modified on"
+msgstr "最后修改"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_fix_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_number_of_records_line_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_param_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_batch_delete_wizard_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_duplicate_client_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_edit_database_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_rename_database_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_write_uid
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_support_team_write_uid
+msgid "Last Updated by"
+msgstr "上次更新"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_fix_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_number_of_records_line_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_param_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_batch_delete_wizard_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_duplicate_client_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_edit_database_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_rename_database_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_write_date
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_support_team_write_date
+msgid "Last Updated on"
+msgstr "最后更新"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid "Limit Number Of Records"
+msgstr "记录数量限制"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_line_ids
+msgid "Limit line"
+msgstr "行数限制"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_local_host
+msgid "Local host"
+msgstr "本地主机"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_local_port
+msgid "Local port"
+msgstr "本地端口"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_form
+msgid "Log in"
+msgstr "登入"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_form
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_tree
+msgid "Log in to client database."
+msgstr "登入客户数据库"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+msgid "Log in to template DB"
+msgstr "登入模板"
+
+#. module: saas_portal
+#: selection:saas_portal.plan,on_create:0
+msgid "Log into just created instance"
+msgstr "登入创建实例"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_maximum_allowed_dbs_per_partner
+msgid "Maximum Allowed Dbs Per Partner"
+msgstr "每客户最大服务数量"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_maximum_allowed_trial_dbs_per_partner
+msgid "Maximum Allowed Trial Dbs Per Partner"
+msgstr "每客户最大试用数量"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_number_of_records_line_max_records
+msgid "Maximum Records"
+msgstr "最大记录数量"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_fix_method
+msgid "Method"
+msgstr "方法"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_fix_model
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_limit_number_of_records_line_model
+msgid "Model"
+msgstr "模型"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_edit_database_name
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+msgid "Name"
+msgstr "名称"
+
+#. module: saas_portal
+#: model:mail.template,subject:saas_portal.email_template_expiration_notify
+#: model:mail.template,subject:saas_portal.email_template_has_expired_notify
+#: model:mail.template,subject:saas_portal.email_template_storage_exceed
+msgid "Notification"
+msgstr "提醒"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_notification_sent
+msgid "Notification Sent"
+msgstr "提醒已发送"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid "Notifications"
+msgstr "提醒"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_notify_user
+msgid "Notify User"
+msgstr "提醒用户"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_res_config_settings_expiration_notify_in_advance
+msgid ""
+"Notify partners when less then defined number of days left befor expiration"
+msgstr "如果期限少于定义的天数，则通知用户"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid ""
+"Notify partners when less then defined number of days left befor expiration."
+msgstr "如果期限少于定义的天数，则通知用户"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_create_client_notify_user
+msgid "Notify user by email when database will have been created"
+msgstr "数据库创建后发送email提醒用户"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_oauth_application_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_oauth_application_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_oauth_application_id
+msgid "OAuth Application"
+msgstr "授权"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.oauth_applications
+#: model:ir.ui.menu,name:saas_portal.menu_oauth_applications
+msgid "OAuth Applications"
+msgstr "授权"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+msgid "Odoo DB Settings"
+msgstr "数据库设置"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_odoo_version
+msgid "Odoo version"
+msgstr "ERP版本"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_on_create_email_template
+msgid "On Create Email Template"
+msgstr "创建Email模板时"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_server_form
+msgid "Open Server"
+msgstr "打开服务器"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_res_config_settings_page_for_maximumdb
+msgid "Page For Maximumdb"
+msgstr "最大数据库页"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_res_config_settings_page_for_maximumtrialdb
+msgid "Page For Maximumtrialdb"
+msgstr "最大试用数据库页"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_res_config_settings_page_for_nonfree_subdomains
+msgid "Page For Nonfree Subdomains"
+msgstr "收费子域名页"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_param_ids
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid "Parameters"
+msgstr "参数"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_partner_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_partner_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_duplicate_client_partner_id
+msgid "Partner"
+msgstr "用户"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_password
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_password
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_password
+msgid "Password"
+msgstr "密码"
+
+#. module: saas_portal
+#: selection:saas_portal.client,state:0 selection:saas_portal.database,state:0
+msgid "Pending"
+msgstr "待定"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_plan_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_plan_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_name
+#: model:ir.ui.view,arch_db:saas_portal.view_saas_portal_client_filter
+msgid "Plan"
+msgstr "计划"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+msgid "Plan Settings"
+msgstr "计划设置"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_plans
+#: model:ir.ui.menu,name:saas_portal.menu_plans
+#: model:ir.ui.view,arch_db:saas_portal.view_databases_tree
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_tree
+msgid "Plans"
+msgstr "计划"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_public_url
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_public_url
+msgid "Public Url"
+msgstr "公共Url"
+
+#. module: saas_portal
+#: code:addons/saas_portal/models/saas_portal.py:150
+#: code:addons/saas_portal/models/saas_portal.py:562
+#: code:addons/saas_portal/models/saas_portal.py:859
+#: code:addons/saas_portal/wizard/config_wizard.py:91
+#, python-format
+msgid ""
+"Reason: %s \n"
+" Message: %s"
+msgstr "原因：%s\n信息：%s\n"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_res_config_settings_page_for_maximumdb
+msgid "Redirection url for maximum non-trial databases limit exception"
+msgstr "收费数据库超限重定向"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid "Redirection url for maximum non-trial databases limit exception."
+msgstr "收费数据库超限重定向"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_res_config_settings_page_for_maximumtrialdb
+msgid "Redirection url for maximum trial databases limit exception"
+msgstr "试用数据库超限重定向"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid "Redirection url for maximum trial databases limit exception."
+msgstr "试用数据库超限重定向"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_res_config_settings_page_for_nonfree_subdomains
+msgid ""
+"Redirection url from /page/start when subdomains is not free and not paid"
+msgstr "域名未付费时从/page/start重定向"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid ""
+"Redirection url from /page/start when subdomains is not free and not paid."
+msgstr "域名未付费时从/page/start重定向"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_rename_database_view_form
+msgid "Rename"
+msgstr "重命名"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_rename_database
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_form
+msgid "Rename Database"
+msgstr "重命名数据库"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_request_port
+msgid "Request Port"
+msgstr "请求端口"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_access_remove
+msgid "Restrict access"
+msgstr "访问限制"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_config_access_remove
+msgid ""
+"Restrict access for all users except super-user.\n"
+"Note, that "
+msgstr "除管理员外的用户访问限制"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_description
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid "Result"
+msgstr "结果"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_res_config_settings_module_saas_server_backup_rotate
+msgid "Rotate backups"
+msgstr "循环备份"
+
+#. module: saas_portal
+#: model:ir.ui.menu,name:saas_portal.menu_base_saas
+#: model:ir.ui.menu,name:saas_portal.menu_saas
+msgid "SaaS"
+msgstr "云服务"
+
+#. module: saas_portal
+#: model:ir.actions.server,name:saas_portal.saas_portal_sync_server_ir_actions_server
+#: model:ir.cron,cron_name:saas_portal.saas_portal_sync_server
+#: model:ir.cron,name:saas_portal.saas_portal_sync_server
+msgid "SaaS Portal sync server"
+msgstr "门户同步服务器"
+
+#. module: saas_portal
+#: model:ir.model,name:saas_portal.model_saas_portal_server
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_server_id
+msgid "SaaS Server"
+msgstr "云服务器"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid "Saas Portal"
+msgstr "云门户"
+
+#. module: saas_portal
+#: model:ir.actions.server,name:saas_portal.saas_portal_notify_before_expiration_ir_actions_server
+#: model:ir.cron,cron_name:saas_portal.saas_portal_notify_before_expiration
+#: model:ir.cron,name:saas_portal.saas_portal_notify_before_expiration
+msgid "Saas portal - notify expired clients"
+msgstr "云门户-提醒过期用户"
+
+#. module: saas_portal
+#: model:ir.actions.server,name:saas_portal.saas_portal_suspend_expired_ir_actions_server
+#: model:ir.cron,cron_name:saas_portal.saas_portal_suspend_expired
+#: model:ir.cron,name:saas_portal.saas_portal_suspend_expired
+msgid "Saas portal - suspend expired clients"
+msgstr "云门户-暂停过期用户"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_res_config_settings_module_saas_portal_sale_online
+msgid "Sale SaaS from website shop"
+msgstr "从网站销售云服务"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_user_id
+msgid "Salesperson"
+msgstr "销售员"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_local_request_scheme
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_request_scheme
+msgid "Scheme"
+msgstr "方案"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_saas_portal_client_filter
+msgid "Search Client"
+msgstr "搜索客户"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_databases_filter
+msgid "Search Databases"
+msgstr "搜索数据库"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.batch_delete_wizard_view_form
+msgid "Selected databases will be deleted from the server"
+msgstr "选中数据库将被删除"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_sequence
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_sequence
+msgid "Sequence"
+msgstr "顺序"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_server_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_server_id
+#: model:ir.ui.view,arch_db:saas_portal.view_server_form
+#: model:ir.ui.view,arch_db:saas_portal.view_server_tree
+msgid "Server"
+msgstr "服务器"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_oauth_application_server_db_ids
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_server_db_ids
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_server_db_ids
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_server_db_ids
+#: model:ir.ui.view,arch_db:saas_portal.oauth_application_form
+msgid "Server Database"
+msgstr "服务器数据库"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_server_form
+msgid "Server-side requests"
+msgstr "服务器端请求"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_server
+#: model:ir.ui.menu,name:saas_portal.menu_server
+msgid "Servers"
+msgstr "服务器"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid "Set base domain name for your saas env."
+msgstr "为云环境设置域名"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_saas_portal_config_settings
+#: model:ir.ui.menu,name:saas_portal.menu_saas_portal_general_settings
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_form
+msgid "Settings"
+msgstr "设置"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_state
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_state
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_state
+msgid "State"
+msgstr "状态"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_storage_exceed
+msgid "Storage limit has been exceed"
+msgstr "已超过存储限制"
+
+#. module: saas_portal
+#: model:mail.message.subtype,description:saas_portal.mt_expired
+#: model:mail.message.subtype,name:saas_portal.mt_expired
+#: model:mail.message.subtype,name:saas_portal.mt_support_team_expired
+msgid "Subscription expired"
+msgstr "订阅过期"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_client_trial_hours
+msgid "Subsription initial period in hours for trials"
+msgstr "试用初始小时数"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_summary
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+msgid "Summary"
+msgstr "摘要"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_res_users_support_team_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_support_team_id
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_support_team_id
+#: model:ir.ui.view,arch_db:saas_portal.view_support_team_form
+msgid "Support Team"
+msgstr "支持团队"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.saas_portal_support_teams
+#: model:ir.ui.menu,name:saas_portal.menu_saas_portal_support_teams
+#: model:ir.ui.view,arch_db:saas_portal.view_support_team_tree
+msgid "Support Teams"
+msgstr "支持团队"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_res_users_support_team_id
+msgid "Support team for SaaS"
+msgstr "云服务支持团队"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_form
+msgid "Sync client"
+msgstr "同步客户"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_clients_form
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+#: model:ir.ui.view,arch_db:saas_portal.view_server_form
+msgid "Sync server"
+msgstr "同步服务器"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_support_team_name
+msgid "Team name"
+msgstr "团队名称"
+
+#. module: saas_portal
+#: model:ir.ui.menu,name:saas_portal.menu_saas_tech
+msgid "Technical Records"
+msgstr "技术记录"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+msgid "Technical Settings"
+msgstr "技术设置"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_template_id
+#: selection:saas_portal.client,state:0 selection:saas_portal.database,state:0
+msgid "Template"
+msgstr "模版"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_oauth_application_template_db_ids
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_template_db_ids
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_template_db_ids
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_template_db_ids
+#: model:ir.ui.view,arch_db:saas_portal.oauth_application_form
+msgid "Template Database"
+msgstr "模版数据库"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_clients_host_template
+msgid "Template for clients host names"
+msgstr "客户主机名模版"
+
+#. module: saas_portal
+#: code:addons/saas_portal/models/saas_portal.py:403
+#, python-format
+msgid "Template for db name is not configured"
+msgstr "模板的数据库名称未配置"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_templates
+#: model:ir.ui.menu,name:saas_portal.menu_templates
+#: model:ir.ui.view,arch_db:saas_portal.view_databases_filter
+msgid "Templates"
+msgstr "模板"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_server_clients_host_template
+msgid ""
+"The possible dynamic parts of the host names are: {dbname}, "
+"{base_saas_domain}, {base_saas_domain_1}"
+msgstr "可设置主机名称：{dbname},{base_saas_domain}, {base_saas_domain_1} "
+
+#. module: saas_portal
+#: code:addons/saas_portal/controllers/main.py:95
+#, python-format
+msgid "There is no plan configured"
+msgstr "没有配置计划"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid ""
+"This sections allows execute special commands on client. Ask developers for "
+"instructions."
+msgstr "这部分允许客户执行特定命令，询问开发者"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+msgid ""
+"This sections allows to limit number of records in arbitrary model on "
+"client. Ask developers for instructions."
+msgstr "允许客户限制记录数量，详询开发者。"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_tz
+msgid "TimeZone"
+msgstr "时区"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_client_token_ids
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_database_token_ids
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_server_token_ids
+msgid "Tokens"
+msgstr "令牌"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_total_storage_limit
+msgid "Total storage limit (MB)"
+msgstr "存储数量(MB)"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_trial
+msgid "Trial"
+msgstr "试用"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_uninstall_addons
+msgid "Uninstall Addons"
+msgstr "卸载模块"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_update_addons_list
+msgid "Update Addon List"
+msgstr "更新模块列表"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_update_addons
+msgid "Update Addons"
+msgstr "升级模块"
+
+#. module: saas_portal
+#: model:ir.actions.act_window,name:saas_portal.action_upgrade_clients
+msgid "Upgrade Clients"
+msgstr "升级客户"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_res_config_settings_module_saas_portal_sale_online
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid "Use saas_portal_sale_online module"
+msgstr "使用在线销售模块"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_res_config_settings_module_saas_server_backup_rotate
+#: model:ir.ui.view,arch_db:saas_portal.res_config_settings_view_form_inherited_saas_portal
+msgid "Use saas_server_backup_rotate module"
+msgstr "使用循环备份模块"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_edit_database_view_form
+msgid "Use the following link to log in as Administrator:<br/>"
+msgstr "登录到管理员"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_plan_dbname_template
+msgid ""
+"Used for generating client database domain name. Use %i for numbering. "
+"Ignore if you use manually created db names"
+msgstr "客户数据库名称，%i为自增加计数，留空需要手动创建"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_create_client_user_id
+msgid "User"
+msgstr "用户"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_plan_server_id
+msgid "User this saas server or choose random"
+msgstr "使用此服务器或随机选择"
+
+#. module: saas_portal
+#: model:ir.model,name:saas_portal.model_res_users
+msgid "Users"
+msgstr "用户"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_config_param_value
+msgid "Value"
+msgstr "值"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+msgid "Website Settings"
+msgstr "网站设置"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_website_description
+msgid "Website description"
+msgstr "网站描述"
+
+#. module: saas_portal
+#: model:ir.model.fields,field_description:saas_portal.field_saas_portal_plan_on_create
+msgid "Workflow on create"
+msgstr "创建时执行工作流"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_plan_grace_period
+msgid "initial days before expiration"
+msgstr "初始天数"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_plan_max_users
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_plan_total_storage_limit
+msgid "leave 0 for no limit"
+msgstr "0-无限制"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_server_local_host
+msgid "local host or ip address of server for server-side requests"
+msgstr "服务器端请求的域名或IP"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_server_local_port
+msgid "local tcp port of server for server-side requests"
+msgstr "本地端口，服务器端访问需要"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_plan_maximum_allowed_dbs_per_partner
+msgid "maximum allowed non-trial databases per customer"
+msgstr "允许最多收费数据库"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_plan_maximum_allowed_trial_dbs_per_partner
+msgid "maximum allowed trial databases per customer"
+msgstr "最大试用数据库数量"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_client_notification_sent
+msgid "notification about oncoming expiration has sent"
+msgstr "即将过期提醒已发送"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.action_database_form
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_create_client_view_form
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_duplicate_client_view_form
+#: model:ir.ui.view,arch_db:saas_portal.saas_portal_rename_database_view_form
+msgid "or"
+msgstr "或"
+
+#. module: saas_portal
+#: model:ir.ui.view,arch_db:saas_portal.view_databases_form
+#: model:ir.ui.view,arch_db:saas_portal.view_plans_form
+msgid "plans"
+msgstr "计划"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_plan_expiration
+msgid "time to delete database. Use for demo"
+msgstr "demo删除数据库的时间"
+
+#. module: saas_portal
+#: model:ir.model.fields,help:saas_portal.field_saas_portal_server_verify_ssl
+msgid ""
+"verify SSL certificates for server-side HTTPS requests, just like a web "
+"browser"
+msgstr ""

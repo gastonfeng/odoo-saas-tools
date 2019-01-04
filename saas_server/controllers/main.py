@@ -30,6 +30,7 @@ class SaasServer(http.Controller):
     @http.route(['/saas_server/new_database'], type='http', website=True, auth='public')
     @fragment_to_query_string
     @webservice
+    ##  @ingroup url
     def new_database(self, **post):
         _logger.info('new_database post: %s', post)
         state = simplejson.loads(post.get('state'))
@@ -104,6 +105,7 @@ class SaasServer(http.Controller):
     @http.route(['/saas_server/edit_database'], type='http', auth='public', website=True)
     @fragment_to_query_string
     @webservice
+    ##  @ingroup url
     def edit_database(self, **post):
         _logger.info('edit_database post: %s', post)
 
@@ -121,6 +123,7 @@ class SaasServer(http.Controller):
     @http.route(['/saas_server/upgrade_database'], type='http', auth='public')
     @fragment_to_query_string
     @webservice
+    ##  @ingroup url
     def upgrade_database(self, **post):
         state = simplejson.loads(post.get('state'))
         data = state.get('data')
@@ -142,6 +145,7 @@ class SaasServer(http.Controller):
     @http.route(['/saas_server/rename_database'], type='http', website=True, auth='public')
     @fragment_to_query_string
     @webservice
+    ##  @ingroup url
     def rename_database(self, **post):
         _logger.info('delete_database post: %s', post)
         state = simplejson.loads(post.get('state'))
@@ -162,6 +166,7 @@ class SaasServer(http.Controller):
     @http.route(['/saas_server/delete_database'], type='http', website=True, auth='public')
     @fragment_to_query_string
     @webservice
+    ##  @ingroup url
     def delete_database(self, **post):
         _logger.info('delete_database post: %s', post)
 
@@ -198,6 +203,7 @@ class SaasServer(http.Controller):
         return werkzeug.utils.redirect('/web')
 
     @http.route(['/saas_server/ab/css/<dbuuid>.css'], type='http', auth='public')
+    ##  @ingroup url
     def ab_css(self, dbuuid=None):
         content = ''
         message = self._get_message(dbuuid)
@@ -258,6 +264,7 @@ class SaasServer(http.Controller):
 
     @http.route(['/saas_server/sync_server'], type='http', auth='public')
     @webservice
+    ##  @ingroup url
     def stats(self, **post):
         _logger.info('sync_server post: %s', post)
 
@@ -301,6 +308,7 @@ class SaasServer(http.Controller):
 
     @http.route(['/saas_server/backup_database'], type='http', website=True, auth='public')
     @fragment_to_query_string
+    ##  @ingroup url
     def backup_database(self, **post):
         _logger.info('backup_database post: %s', post)
 

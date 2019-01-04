@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from odoo import models, api
 from odoo.tools import mute_logger
 
@@ -8,6 +9,7 @@ class IrConfigParameter(models.Model):
     @api.model_cr
     @mute_logger('odoo.addons.base.ir.ir_config_parameter')
     def init(self, force=False):
+        '''保存数据库id'''
         super(IrConfigParameter, self).init(force=force)
         if force:
             oauth_oe = self.env.ref('saas_client.saas_oauth_provider')

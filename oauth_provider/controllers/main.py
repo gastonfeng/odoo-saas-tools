@@ -69,6 +69,7 @@ class OAuth2(http.Controller):
         return response
 
     @http.route('/oauth2/auth', type='http', auth='public')
+    ##  @ingroup url
     def auth(self, **kw):
         # kw:
         #
@@ -114,6 +115,7 @@ class OAuth2(http.Controller):
                 return self._response_from_error(e)
 
     @http.route('/oauth2/tokeninfo', type='http', auth='public')
+    ##  @ingroup url
     def tokeninfo(self, **kw):
         uri, http_method, body, headers = self._extract_params(request, kw)
         is_valid, req = self._server.verify_request(uri, http_method, body,

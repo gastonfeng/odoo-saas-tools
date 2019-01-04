@@ -1,0 +1,79 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* saas_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-01 06:21+0000\n"
+"PO-Revision-Date: 2019-01-01 06:21+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client_users_len
+#: model:ir.model.fields,field_description:saas_base.field_saas_portal_client_users_len_5666
+msgid "Count users"
+msgstr "Count users"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client_db_storage
+#: model:ir.model.fields,field_description:saas_base.field_saas_portal_client_db_storage_5669
+msgid "DB storage (MB)"
+msgstr "DB storage (MB)"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client_display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client_file_storage
+#: model:ir.model.fields,field_description:saas_base.field_saas_portal_client_file_storage_5668
+msgid "File storage (MB)"
+msgstr "File storage (MB)"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client_id
+msgid "ID"
+msgstr "ID"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client___last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client_max_users
+#: model:ir.model.fields,field_description:saas_base.field_saas_portal_client_max_users_5667
+msgid "Max users allowed"
+msgstr "Max users allowed"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client_total_storage_limit
+#: model:ir.model.fields,field_description:saas_base.field_saas_portal_client_total_storage_limit_5670
+msgid "Total storage limit (MB)"
+msgstr "Total storage limit (MB)"
+
+#. module: saas_base
+#: model:ir.model.fields,field_description:saas_base.field_saas_base_client_trial
+#: model:ir.model.fields,field_description:saas_base.field_saas_portal_client_trial_5671
+msgid "Trial"
+msgstr "Trial"
+
+#. module: saas_base
+#: model:ir.model.fields,help:saas_base.field_saas_base_client_trial
+#: model:ir.model.fields,help:saas_base.field_saas_portal_client_trial_5671
+msgid "indication of trial clients"
+msgstr "indication of trial clients"
+
+#. module: saas_base
+#: model:ir.model,name:saas_base.model_saas_base_client
+msgid "saas_base.client"
+msgstr "saas_base.client"
+

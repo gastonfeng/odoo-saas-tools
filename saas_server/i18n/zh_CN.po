@@ -1,0 +1,203 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* saas_server
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-03 03:07+0000\n"
+"PO-Revision-Date: 2019-01-03 03:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_server
+#: code:addons/saas_server/controllers/main.py:299
+#, python-format
+msgid "'You use a live preview. The database will be destroyed after %s hour%s.'"
+msgstr "'You use a live preview. The database will be destroyed after %s hour%s.'"
+
+#. module: saas_server
+#: selection:saas_server.client,state:0
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#. module: saas_server
+#: model:ir.ui.menu,name:saas_server.menu_saas_server_config
+msgid "Configuration"
+msgstr "配置"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: saas_server
+#: model:ir.ui.view,arch_db:saas_server.view_clients_form
+msgid "Database"
+msgstr "数据库"
+
+#. module: saas_server
+#: model:ir.ui.view,arch_db:saas_server.view_saas_server_client_filter
+msgid "Database Name"
+msgstr "Database Name"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client_client_id
+msgid "Database UUID"
+msgstr "Database UUID"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client_name
+msgid "Database name"
+msgstr "Database name"
+
+#. module: saas_server
+#: model:ir.actions.act_window,name:saas_server.action_clients
+#: model:ir.ui.menu,name:saas_server.menu_clients
+#: model:ir.ui.view,arch_db:saas_server.view_clients_tree
+msgid "Databases"
+msgstr "Databases"
+
+#. module: saas_server
+#: selection:saas_server.client,state:0
+msgid "Deleted"
+msgstr "Deleted"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client_expiration_datetime
+msgid "Expiration Datetime"
+msgstr "Expiration Datetime"
+
+#. module: saas_server
+#: model:ir.ui.view,arch_db:saas_server.res_config_settings_view_form_inherit_saas_server
+msgid "Features"
+msgstr "Features"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client_host
+msgid "Host"
+msgstr "Host"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client_id
+msgid "ID"
+msgstr "ID"
+
+#. module: saas_server
+#: model:ir.ui.view,arch_db:saas_server.view_saas_server_client_filter
+#: selection:saas_server.client,state:0
+msgid "In Progress"
+msgstr "In Progress"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client___last_update
+msgid "Last Modified on"
+msgstr "最后修改时间"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client_write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: saas_server
+#: selection:saas_server.client,state:0
+msgid "New"
+msgstr "New"
+
+#. module: saas_server
+#: selection:saas_server.client,state:0
+msgid "Pending"
+msgstr "Pending"
+
+#. module: saas_server
+#: model:ir.ui.menu,name:saas_server.menu_saas
+msgid "SaaS"
+msgstr "SaaS"
+
+#. module: saas_server
+#: model:ir.ui.menu,name:saas_server.menu_base_saas
+msgid "SaaS Server"
+msgstr "SaaS Server"
+
+#. module: saas_server
+#: model:ir.ui.view,arch_db:saas_server.res_config_settings_view_form_inherit_saas_server
+msgid "Saas Server"
+msgstr "Saas Server"
+
+#. module: saas_server
+#: model:ir.ui.view,arch_db:saas_server.view_saas_server_client_filter
+msgid "Search Client"
+msgstr "Search Client"
+
+#. module: saas_server
+#: model:ir.actions.act_window,name:saas_server.action_saas_server_config_settings
+#: model:ir.ui.menu,name:saas_server.menu_saas_server_general_settings
+msgid "Settings"
+msgstr "设置"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_saas_server_client_state
+msgid "State"
+msgstr "州/省"
+
+#. module: saas_server
+#: selection:saas_server.client,state:0
+msgid "Template"
+msgstr "Template"
+
+#. module: saas_server
+#: code:addons/saas_server/models/saas_server.py:434
+#, python-format
+msgid "Transport agent has not been configured. You need either\n"
+"              install one of saas_server_backup_* or remove\n"
+"              saas_portal_backup"
+msgstr "Transport agent has not been configured. You need either\n"
+"              install one of saas_server_backup_* or remove\n"
+"              saas_portal_backup"
+
+#. module: saas_server
+#: model:ir.model.fields,field_description:saas_server.field_res_config_settings_module_saas_server_backup_ftp
+msgid "Use SFTP Backup profile"
+msgstr "Use SFTP Backup profile"
+
+#. module: saas_server
+#: model:ir.model.fields,help:saas_server.field_res_config_settings_module_saas_server_backup_ftp
+#: model:ir.ui.view,arch_db:saas_server.res_config_settings_view_form_inherit_saas_server
+msgid "Use saas_server_backup_ftp module"
+msgstr "Use saas_server_backup_ftp module"
+
+#. module: saas_server
+#: sql_constraint:saas_server.client:0
+msgid "client_id should be unique!"
+msgstr "client_id should be unique!"
+
+#. module: saas_server
+#: model:ir.model,name:saas_server.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"
+
+#. module: saas_server
+#: model:ir.model,name:saas_server.model_saas_server_client
+msgid "saas_server.client"
+msgstr "saas_server.client"
+

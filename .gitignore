@@ -60,3 +60,4 @@ docs/_build/
 
 # nvim mergtool
 *.orig
+/doxy/

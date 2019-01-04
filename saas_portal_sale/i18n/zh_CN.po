@@ -1,0 +1,243 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * saas_portal_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-01 06:33+0000\n"
+"PO-Revision-Date: 2019-01-01 06:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saas_portal_sale
+#: model:mail.template,body_html:saas_portal_sale.email_template_create_saass
+msgid ""
+"\n"
+"\n"
+"            <p>\n"
+"                Thank you for registering with us<br />\n"
+"                Your new ODOO ERP application platform is ready!<br />\n"
+"            </p>\n"
+"            <p>\n"
+"                % for plan in object.plan_ids:\n"
+"                    % if plan.dbname_prefix:\n"
+"                        <p>\n"
+"                            We have created a testing environment in:<br />\n"
+"                            % for dbname in ctx[\"dbnames\"]:\n"
+"                                % if dbname.startswith(plan.dbname_prefix):\n"
+"                                    <em>${dbname}</em><br />\n"
+"                                % endif\n"
+"                            % endfor\n"
+"                            You can enter with the email and password you registered on our page to start practicing.\n"
+"                            Any transactions you make in the test environment, is only for testing so you can practice until you feel ready.\n"
+"                        </p>\n"
+"\n"
+"                        <p>\n"
+"                            Once you are ready to start growing your business, you can enter your production environment at:<br />\n"
+"                            % for dbname in ctx[\"dbnames\"]:\n"
+"                                % if not dbname.startswith(plan.dbname_prefix):\n"
+"                                    <em>${dbname}</em><br />\n"
+"                                % endif\n"
+"                            % endfor\n"
+"                            You can enter with the email and password that you registered on our page.\n"
+"                        </p>\n"
+"                    % endif\n"
+"                % endfor\n"
+"            </p>\n"
+"\n"
+"            "
+msgstr ""
+"\n"
+"\n"
+"<\n"
+"谢谢你与我们注册<\n"
+"你的新用ERP系统应用程序的平台准备好了！<br/>\n"
+"</p>\n"
+"<\n"
+"%用于计划中的对象。plan_ids:\n"
+"％，如果计划。dbname_prefix:\n"
+"<\n"
+"我们已经创建了一个测试环境：\n"
+"%dbname在ctx[\"dbnames\"]:\n"
+"％，如果dbname的。startswith(计划。dbname_prefix):\n"
+"<他们>${dbname}</em><\n"
+"%endif\n"
+"%endfor\n"
+"你可以进入电子邮件和密码的注册在我们的网页开始练习。\n"
+"任何事你做的测试环境，仅仅是用于测试这样你可以练习直到你感觉好准备。\n"
+"</p>\n"
+"\n"
+"<\n"
+"一旦你准备好开始越来越多的业务，可以进入生产环境中在：\n"
+"%dbname在ctx[\"dbnames\"]:\n"
+"％，如果不dbname的。startswith(计划。dbname_prefix):\n"
+"<他们>${dbname}</em><\n"
+"%endif\n"
+"%endfor\n"
+"你可以进入电子邮件和密码的注册在我们的网页。\n"
+"</p>\n"
+"%endif\n"
+"%endfor\n"
+"</p>\n"
+"\n"
+
+#. module: saas_portal_sale
+#: model:mail.template,body_html:saas_portal_sale.email_template_create_saas
+msgid ""
+"\n"
+"        Your payment for service is accepted!\n"
+"\n"
+"        <p>Now you can choose domain name for your service and create database </p>\n"
+"        <p>open following link</p>\n"
+"        <p>\n"
+"        % for plan in ctx['plans']:\n"
+"        <br/>\n"
+"        http://${ctx['saas_domain']}/page/start?plan_id=${plan}\n"
+"        % endfor\n"
+"        </p>\n"
+"            "
+msgstr ""
+"\n"
+"您支付的服务是接受！\n"
+"\n"
+"<现在你可以选择的域名为您服务和创建数据库</p>\n"
+"<打开下面的链接</p>\n"
+"<\n"
+"%用于计划在ctx['计划']:\n"
+"<\n"
+"http://${ctx['saas_domain']}/page/开始？plan_id的数据类型=${计划}\n"
+"%endfor\n"
+"</p>\n"
+
+#. module: saas_portal_sale
+#: model:ir.model,name:saas_portal_sale.model_saas_portal_client
+msgid "Client"
+msgstr "客户"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,field_description:saas_portal_sale.field_saas_portal_client_contract_id
+msgid "Contract"
+msgstr "合同"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,help:saas_portal_sale.field_product_product_plan_ids
+#: model:ir.model.fields,help:saas_portal_sale.field_product_template_plan_ids
+msgid ""
+"Create db per each selected plan - use the DB Names prefix setting in each "
+"selected plans"
+msgstr "创建数据库每个选定的计划使用的数据库名前缀设定在每个选定的计划"
+
+#. module: saas_portal_sale
+#: selection:saas_portal.plan,non_trial_instances:0
+msgid "Create new"
+msgstr "创建"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,field_description:saas_portal_sale.field_saas_portal_plan_free_subdomains
+msgid "Free Subdomains"
+msgstr "免费域名"
+
+#. module: saas_portal_sale
+#: selection:saas_portal.plan,non_trial_instances:0
+msgid "From trial"
+msgstr "从试用实例"
+
+#. module: saas_portal_sale
+#: model:ir.ui.view,arch_db:saas_portal_sale.view_clients_form
+msgid "Invoicing"
+msgstr "发票"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,field_description:saas_portal_sale.field_saas_portal_plan_non_trial_instances
+msgid "Non-trial instances"
+msgstr "非试用实例"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,field_description:saas_portal_sale.field_saas_portal_plan_product_tmpl_id
+msgid "Product"
+msgstr "产品"
+
+#. module: saas_portal_sale
+#: model:ir.model,name:saas_portal_sale.model_product_attribute
+msgid "Product Attribute"
+msgstr "产品属性"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,field_description:saas_portal_sale.field_saas_portal_plan_product_variant_ids
+msgid "Product variants"
+msgstr "产品类型"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,field_description:saas_portal_sale.field_product_product_saas_plan_id
+#: model:ir.model.fields,field_description:saas_portal_sale.field_product_template_saas_plan_id
+msgid "Related SaaS Plan"
+msgstr "关于云服务计划"
+
+#. module: saas_portal_sale
+#: model:ir.ui.view,arch_db:saas_portal_sale.product_product_saas
+#: model:ir.ui.view,arch_db:saas_portal_sale.product_template_saas
+msgid "SaaS"
+msgstr "云服务"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,field_description:saas_portal_sale.field_product_product_plan_ids
+#: model:ir.model.fields,field_description:saas_portal_sale.field_product_template_plan_ids
+msgid "SaaS Plans"
+msgstr "云服务计划"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,field_description:saas_portal_sale.field_product_attribute_saas_code
+msgid "Saas Code"
+msgstr "云服务代码"
+
+#. module: saas_portal_sale
+#: model:mail.template,subject:saas_portal_sale.email_template_create_saas
+msgid "To"
+msgstr "到"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,field_description:saas_portal_sale.field_product_product_saas_default
+#: model:ir.model.fields,field_description:saas_portal_sale.field_product_template_saas_default
+msgid "Use as default SaaS product"
+msgstr "使用默认云服务产品"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,help:saas_portal_sale.field_product_product_saas_default
+#: model:ir.model.fields,help:saas_portal_sale.field_product_template_saas_default
+msgid "Use as default SaaS product on signup form"
+msgstr "注册时使用默认云服务产品"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,help:saas_portal_sale.field_saas_portal_plan_non_trial_instances
+msgid "Whether to use trial database or create new one when user make payment"
+msgstr "用户付款时使用试用数据库或建立新数据库"
+
+#. module: saas_portal_sale
+#: model:mail.template,subject:saas_portal_sale.email_template_create_saass
+msgid "Your ODOO ERP Application System is Ready"
+msgstr "你的ERP系统已经准备好"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,help:saas_portal_sale.field_saas_portal_plan_free_subdomains
+msgid ""
+"allow to choose subdomains for trials otherwise allow only after payment"
+msgstr "子域名免费"
+
+#. module: saas_portal_sale
+#: model:ir.model.fields,field_description:saas_portal_sale.field_product_product_on_create_email_template
+#: model:ir.model.fields,field_description:saas_portal_sale.field_product_template_on_create_email_template
+msgid "credentials mail"
+msgstr "凭据邮件"
+
+#. module: saas_portal_sale
+#: model:ir.model,name:saas_portal_sale.model_saas_portal_plan
+msgid "saas_portal.plan"
+msgstr "计划"
+
+

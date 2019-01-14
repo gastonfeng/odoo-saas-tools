@@ -1,17 +1,18 @@
-import time
-import psycopg2
+import logging
 import random
 import string
+import time
+from datetime import datetime
+
+import psycopg2
+from odoo.addons.saas_base.tools import get_size
 
 import odoo
-from datetime import datetime
-from odoo.service import db
-from odoo.tools.translate import _
-from odoo.addons.saas_base.tools import get_size
 from odoo import api, models, fields, SUPERUSER_ID, exceptions
+from odoo.service import db
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from odoo.tools.translate import _
 
-import logging
 _logger = logging.getLogger(__name__)
 
 
@@ -100,7 +101,7 @@ class SaasServerClient(models.Model):
     @api.multi
     def _install_addons(self, client_env, addons):
         for addon in client_env['ir.module.module'].search([
-                ('name', 'in', list(addons))]):
+            ('name', 'in', list(addons))]):
             addon.button_install()
 
     @api.multi
@@ -213,8 +214,8 @@ class SaasServerClient(models.Model):
                 'oauth_uid': portal_owner_uid,
                 'oauth_access_token': access_token,
                 'country_id': owner_user.get('country_id') and
-                self.env['res.country'].browse(owner_user['country_id']) and
-                self.env['res.country'].browse(owner_user['country_id']).id,
+                              self.env['res.country'].browse(owner_user['country_id']) and
+                              self.env['res.country'].browse(owner_user['country_id']).id,
             })
 
             user.write(vals)
@@ -407,9 +408,7 @@ class SaasServerClient(models.Model):
     def _cron_delete_expired_databases(self):
         now = time.strftime(DEFAULT_SERVER_DATETIME_FORMAT)
 
-        res = self.search([('state', 'not in', ['deleted', 'template']),
-                           ('expiration_datetime', '<=', now),
-                           ('trial', '=', True)])
+        res = self.search([('state', 'not in', ['deleted', 'template']), ('expiration_datetime', '<=', now)])
         _logger.info('delete_expired_databases %s', res)
         res.delete_database()
 

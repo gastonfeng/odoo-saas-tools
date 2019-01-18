@@ -415,13 +415,13 @@ class SaasServerClient(models.Model):
     @api.multi
     def delete_database(self):
         for record in self:
-            db.exp_drop(self.name)
+            db.exp_drop(record.name)
         self.write({'state': 'deleted'})
 
     @api.multi
     def rename_database(self, new_dbname):
         for record in self:
-            db.exp_rename(self.name, new_dbname)
+            db.exp_rename(record.name, new_dbname)
         self.name = new_dbname
 
     @api.model

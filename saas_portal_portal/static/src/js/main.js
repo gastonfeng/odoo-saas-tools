@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    var client_id = $("input[name='client_id']").attr('value')
-    var base_saas_domain = $("input[name='base_saas_domain']").attr('value')
+    var client_id = $("input[name='client_id']").attr('value');
+    var base_saas_domain = $("input[name='base_saas_domain']").attr('value');
 
     var new_domain_sel = 'input.new_domain_name';
 
@@ -47,4 +47,4 @@ $(document).ready(function () {
         $input.popover('hide');
     });
 
-})
+});

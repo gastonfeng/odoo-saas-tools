@@ -57,8 +57,7 @@
                     bottom : main_bottom
                 }
             });
-        };
-
+        }
         // ======= Footer animations =====
         // ===============================
         var footer_animation = function () {
@@ -67,8 +66,7 @@
             if (!footer_effect) {
                 footer_stop();
                 return;
-            };
-
+            }
             $footer.toggleClass('o_footer_effect', footer_effect);
             $body.css('padding-bottom', $footer.outerHeight());
 
@@ -102,11 +100,13 @@
                     if (childs.length == 3) {
                         childs.removeClass("col-md-3").addClass("col-md-4");
                     }
-                })
+                });
                 $(".floating_action_container").remove();
             }
-            if (has_aside) { $aside_nav.find("li").has("ul").addClass("parent"); };
-        }
+            if (has_aside) {
+                $aside_nav.find("li").has("ul").addClass("parent");
+            }
+        };
 
         // -- Float action menu
         var floating_menu_layout = function() {
@@ -125,7 +125,7 @@
                 floating_menu_toggle();
                 return false;
             });
-        }
+        };
         var floating_menu_toggle = function() {
             $float.toggleClass("active");
             setTimeout(function() {
@@ -152,7 +152,7 @@
                     return false;
                 })
             })
-        }
+        };
 
         // -- Ripple buttons
         var ripple_animation = function(el_list) {
@@ -265,7 +265,7 @@
                 'transform' : 'translateY( -' + ( base_value - (top/2))  + 'px)',
                 'opacity'   : 1 - opacity
             });
-        }
+        };
 
         $(".content-switcher").each(function(index, switcher) {
             var $switcher = $(switcher),
@@ -309,8 +309,7 @@
                     set_affix(body_h);
                 })
             }
-        };
-
+        }
         // ======= On resize ==============
         // ================================
         // Update properties and conditionally call functions according to resolution
@@ -320,10 +319,12 @@
 
             if (win_w >= screen_md){
                 footer_animation();
-                if (has_aside) { set_affix(body_h); };
+                if (has_aside) {
+                    set_affix(body_h);
+                }
             } else {
                 footer_stop();
-            };
+            }
         });
 
         // ======= On scroll ==============

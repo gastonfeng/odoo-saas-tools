@@ -611,7 +611,7 @@ class SaasPortalClient(models.Model):
     _track = {
         'expired': {
             'saas_portal.mt_expired':
-            lambda self, cr, uid, obj, ctx=None: obj.expired
+            lambda self,  obj, ctx=None: obj.expired
         }
     }
 

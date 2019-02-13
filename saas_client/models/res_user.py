@@ -47,7 +47,7 @@ class ResUsers(models.Model):
         res = super(ResUsers, cls).check(db, uid, passwd)
         cr = cls.pool.cursor()
         try:
-            self = api.Environment(cr, uid, {})[cls._name]
+            self = api.Environment( {})[cls._name]
             suspended = self.env['ir.config_parameter'].get_param('saas_client.suspended', '0')
             if suspended == "1" and uid != SI:
                 raise SuspendedDBException

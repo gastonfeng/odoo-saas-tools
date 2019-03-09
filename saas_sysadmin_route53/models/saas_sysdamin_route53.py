@@ -1,7 +1,8 @@
+import logging
+
 from odoo import api
 from odoo import models
 
-import logging
 _logger = logging.getLogger(__name__)
 
 

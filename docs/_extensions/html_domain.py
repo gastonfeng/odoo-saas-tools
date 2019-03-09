@@ -9,12 +9,12 @@ rendered more or less directly to HTML.
     the purpose of this domain is *not* to document HTML or components
 """
 
+import sphinx.roles
 from docutils import nodes, utils
 from docutils.parsers.rst import Directive, directives
 from docutils.parsers.rst.directives.body import LineBlock
-
-import sphinx.roles
 from sphinx.domains import Domain
+
 
 def setup(app):
     app.add_domain(HtmlDomain)

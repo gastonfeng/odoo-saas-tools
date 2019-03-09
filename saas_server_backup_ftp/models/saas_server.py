@@ -1,10 +1,11 @@
 import base64
+import logging
+import tempfile
+
 import paramiko
 
-import tempfile
 from odoo import api, models
 
-import logging
 _logger = logging.getLogger(__name__)
 
 try:

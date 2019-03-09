@@ -1,7 +1,8 @@
-import odoo
-from odoo.http import OpenERPSession
 from odoo.addons.base_sparse_field.models.fields import monkey_patch
 from odoo.addons.saas_base.exceptions import SuspendedDBException
+
+import odoo
+from odoo.http import OpenERPSession
 
 
 @monkey_patch(OpenERPSession)

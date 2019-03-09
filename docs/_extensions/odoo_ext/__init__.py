@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from . import pygments_override
-from . import switcher
-from . import translator
-
-import sphinx.environment
 import sphinx.builders.html
+import sphinx.environment
 from docutils import nodes
+
+from . import switcher
+
+
 def setup(app):
     if getattr(app.config, 'html_translator_class', None):
         app.warn("Overriding the explicitly set  html_translator_class setting",

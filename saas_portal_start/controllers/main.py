@@ -1,6 +1,7 @@
+from odoo.addons.saas_portal.controllers.main import SaasPortal
+
 from odoo import http
 from odoo.http import request
-from odoo.addons.saas_portal.controllers.main import SaasPortal
 
 
 class SaasPortalStart(SaasPortal):

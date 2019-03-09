@@ -1,11 +1,13 @@
+from datetime import datetime
+
+import pytz
+from odoo.addons.saas_base.tools import get_size
+from odoo.addons.web_settings_dashboard.controllers.main import WebSettingsDashboard
+from pytz import timezone
+
 import odoo
 from odoo import http, SUPERUSER_ID
 from odoo.http import request
-from odoo.addons.web_settings_dashboard.controllers.main import WebSettingsDashboard
-from odoo.addons.saas_base.tools import get_size
-import pytz
-from pytz import timezone
-from datetime import datetime
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
 

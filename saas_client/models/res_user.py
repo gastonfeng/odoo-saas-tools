@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
+from odoo.addons.saas_base.exceptions import SuspendedDBException
+
 from odoo import SUPERUSER_ID as SI
 from odoo import api
 from odoo import exceptions
 from odoo import models, fields
 from odoo.tools.translate import _
-from odoo.addons.saas_base.exceptions import SuspendedDBException
 
 
 class ResUsers(models.Model):

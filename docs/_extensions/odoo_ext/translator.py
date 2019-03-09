@@ -2,7 +2,9 @@
 import os.path
 import posixpath
 import re
-import urllib.request, urllib.parse, urllib.error
+import urllib.error
+import urllib.parse
+import urllib.request
 
 from docutils import nodes
 from sphinx import addnodes, util

@@ -1,10 +1,11 @@
 import base64
+import logging
+
 import paramiko
 
-from odoo import models, fields, api
 from odoo import _, exceptions
+from odoo import models, fields, api
 
-import logging
 _logger = logging.getLogger(__name__)
 try:
     import pysftp

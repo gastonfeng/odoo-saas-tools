@@ -1,16 +1,17 @@
-import functools
 import datetime
-import werkzeug.utils
+import functools
+import logging
+
 import simplejson
+import werkzeug.utils
+from odoo.addons.auth_oauth.controllers.main import fragment_to_query_string
 
 from odoo import api, SUPERUSER_ID
 from odoo import http
+from odoo.http import request
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 from odoo.tools.translate import _
-from odoo.http import request
-from odoo.addons.auth_oauth.controllers.main import fragment_to_query_string
 
-import logging
 _logger = logging.getLogger(__name__)
 
 

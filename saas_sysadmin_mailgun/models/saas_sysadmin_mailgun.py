@@ -1,8 +1,10 @@
-from odoo import models, fields, api
+import logging
+
 import simplejson
+
+from odoo import models, fields, api
 from . import mailgun
 
-import logging
 _logger = logging.getLogger(__name__)
 
 try:

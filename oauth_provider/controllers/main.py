@@ -1,9 +1,11 @@
 import logging
-import simplejson
 import traceback
-from ..validators import server
 from urllib.parse import urlparse
 from urllib.parse import urlunparse
+
+import simplejson
+
+from ..validators import server
 
 try:
     from oauthlib.oauth2.rfc6749 import errors

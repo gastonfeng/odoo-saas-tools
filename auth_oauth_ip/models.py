@@ -1,9 +1,10 @@
+import json
 import re
-import werkzeug
-import urllib.request
 import urllib.error
 import urllib.parse
-import json
+import urllib.request
+
+import werkzeug
 
 from odoo import models, fields, api
 

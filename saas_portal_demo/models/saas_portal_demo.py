@@ -1,7 +1,7 @@
 import xmlrpc.client
 
-from odoo import models, fields, api
 from odoo import SUPERUSER_ID as SI
+from odoo import models, fields, api
 
 
 class SaasPortalServer(models.Model):

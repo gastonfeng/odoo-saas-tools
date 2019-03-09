@@ -1,6 +1,7 @@
-import requests
 import os
 import string
+
+import requests
 
 
 def random_password(length=10):

@@ -1,10 +1,10 @@
-import os
 import logging
-import odoo
-from odoo import models, fields, api
-
+import os
 import subprocess
 import tempfile
+
+import odoo
+from odoo import models, fields, api
 
 _logger = logging.getLogger(__name__)
 

@@ -6,7 +6,6 @@ from urllib.parse import urlencode
 import simplejson
 import werkzeug
 from odoo.addons.saas_base.exceptions import MaximumDBException, MaximumTrialDBException
-from odoo.addons.web.controllers.main import Home, ensure_db
 
 import odoo
 from odoo import exceptions

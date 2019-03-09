@@ -1,5 +1,5 @@
-import inspect
 import importlib
+import inspect
 import os.path
 from urllib.parse import urlunsplit
 

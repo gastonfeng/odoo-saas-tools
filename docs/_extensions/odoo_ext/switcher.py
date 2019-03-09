@@ -1,4 +1,4 @@
-from docutils import nodes, utils
+from docutils import nodes
 from docutils.parsers.rst import Directive
 
 from pygments.lexers import get_lexer_by_name

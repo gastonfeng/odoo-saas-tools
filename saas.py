@@ -12,16 +12,15 @@ except ImportError:
 import argparse
 import contextlib
 import datetime
-import fcntl
-import re
 import os
-import psycopg2
-import requests
+import re
 import signal
 import subprocess
 import time
 import traceback
 import xmlrpc.client
+
+import psycopg2
 
 
 def log(*args):

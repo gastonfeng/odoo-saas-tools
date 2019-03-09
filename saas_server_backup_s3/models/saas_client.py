@@ -1,18 +1,18 @@
+import base64
+import logging
+import math
+import multiprocessing
 import os
 import sys
-from multiprocessing.pool import Pool
-import multiprocessing
 import tempfile
-import base64
+from multiprocessing.pool import Pool
 from tempfile import NamedTemporaryFile
-import math
 
 from odoo import _
 from odoo import api
 from odoo import exceptions
 from odoo import models
 
-import logging
 _logger = logging.getLogger(__name__)
 
 

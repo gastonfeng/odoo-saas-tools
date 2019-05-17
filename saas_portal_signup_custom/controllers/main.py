@@ -42,7 +42,7 @@ class AuthSaasPortal(saas_portal.controllers.main.SaasPortal):
                 kw['dbname'] = plan.dbname_prefix and plan.dbname_prefix + post.get('dbname') \
                                or post.get('dbname')
                 kw['plan_id'] = plan.id
-                dbname = kw['dbname']
+                dbname = self.get_full_dbname(kw['dbname'])
                 res = super(AuthSaasPortal, self).add_new_client(**kw)
                 dbnames.append(dbname)
 

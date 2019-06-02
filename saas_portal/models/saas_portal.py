@@ -121,7 +121,7 @@ class SaasPortalServer(models.Model):
     def action_redirect_to_server(self):
         r = self[0]
         url = '{scheme}://{saas_server}:{port}{path}'.format(
-            scheme=r.request_scheme, saas_server=r.host, port=r.request_port, path='/web')
+            scheme=r.request_scheme, saas_server=r.local_host, port=r.local_port, path='/web')
         return {
             'type': 'ir.actions.act_url',
             'target': 'new',

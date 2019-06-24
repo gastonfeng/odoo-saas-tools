@@ -47,6 +47,7 @@ class SaasPortal(http.Controller):
 
 #        dbname = self.get_full_dbname(post.get('dbname'))
         dbname = post.get('dbname')
+        server_id = post.get('server_id')
         user_id = request.session.uid
         partner_id = None
         if user_id:
@@ -55,7 +56,7 @@ class SaasPortal(http.Controller):
         plan = self.get_plan(int(post.get('plan_id', 0) or 0))
         trial = bool(post.get('trial', False))
         try:
-            res = plan.create_new_database(dbname=dbname,
+            res = plan.create_new_database(dbname=dbname, server_id=server_id,
                                            user_id=user_id,
                                            partner_id=partner_id,
                                            trial=trial, )

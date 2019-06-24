@@ -3,7 +3,7 @@
     <data>
 
         <template id="signup_fields" inherit_id="auth_signup.fields">
-            <xpath expr="//div[@class='form-group field-name']" position="after">
+            <xpath expr="//div[hasclass('form-group', 'field-name')]" position="after">
 
                 <t t-if="reset == false">
                     <div class="form-group field-role">
@@ -28,9 +28,21 @@
                                    placeholder="your-company-name"
                                    required="required" t-att-readonly="'readonly' if only_passwords else None"
                                    t-att-autofocus="'autofocus' if login and not only_passwords else None"/>
-                            <span class="input-group-addon" style="max-width: 150px; overflow-y: hidden;">.
-                                <t t-raw="base_saas_domain"/>
+                            <span class="input-group-addon" style="max-width:30px; overflow-y: hidden;">.
+                                <!--<t t-raw="base_saas_domain"/>-->
+
                             </span>
+                            <select name="server_id" class="form-control" required="required"
+                                    t-att-readonly="'readonly' if only_passwords else None"
+                                    t-att-autofocus="'autofocus' if login and not only_passwords else None"
+                                    style="min-width:150px; overflow-y: hidden;">
+                                <option value=""></option>
+                                <t t-foreach="base_saas_domain or []" t-as="domain">
+                                    <option t-att-value="domain.id">
+                                        <t t-esc="domain.domain_name"/>
+                                    </option>
+                                </t>
+                            </select>
                         </div>
                     </div>
                 </t>

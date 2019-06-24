@@ -160,6 +160,7 @@
                         <group>
                             <field name="odoo_version"/>
                             <field name="name"/>
+                            <field name="domain_name"/>
                             <field name="client_id"/>
                             <field name="active"/>
                             <field name="request_scheme"/>

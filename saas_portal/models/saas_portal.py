@@ -38,6 +38,7 @@ class SaasPortalServer(models.Model):
     _inherits = {'oauth.application': 'oauth_application_id'}
 
     name = fields.Char('Database name', required=True)
+    domain_name = fields.Char('base domain')
     oauth_application_id = fields.Many2one(
         'oauth.application', 'OAuth Application', required=True, ondelete='cascade')
     sequence = fields.Integer('Sequence')
@@ -296,14 +297,14 @@ class SaasPortalPlan(models.Model):
 
     ## @ingroup newdatabase
     @api.multi
-    def _create_new_database(self, dbname=None, client_id=None,
+    def _create_new_database(self, dbname=None, client_id=None, server_id=None,
                              partner_id=None, user_id=None, notify_user=True,
                              trial=False, support_team_id=None, iasync=None):
         '''创建新数据库'''
         self.ensure_one()
         p_client = self.env['saas_portal.client']
         p_server = self.env['saas_portal.server']
-        server = self.server_id
+        server = p_server.search([('id', '=', server_id)])
         if not server:
             server = p_server.get_saas_server()
 

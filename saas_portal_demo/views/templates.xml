@@ -7,7 +7,7 @@
     </template>
 
     <template id="demo_addons" inherit_id="website_sale.product">
-      <xpath expr="//div[@class='row'][2]" position="after">
+        <xpath expr="//div[hasclass('row')][2]" position="after">
         <div class="row" style="padding-top:20px;">
           <div class="col-xs-12">
 
@@ -118,7 +118,7 @@
     </template>
 
     <template id="demo_products_item" inherit_id="website_sale.products_item">
-      <xpath expr="//div[@class='product_price']" position="attributes">
+        <xpath expr="//div[hasclass('product_price')]" position="attributes">
           <attribute name="t-if">len(product.product_variant_ids.mapped('variant_plan_id'))==0</attribute>
       </xpath>
     </template>

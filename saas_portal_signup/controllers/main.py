@@ -12,8 +12,8 @@ class AuthSignupHome(auth_signup.controllers.main.AuthSignupHome):
     def web_auth_signup(self, *args, **kw):
         if not kw.get('redirect', False) and kw.get('dbname', False):
             redirect = '/saas_portal/add_new_client'
-            kw['redirect'] = '%s?dbname=%s&plan_id=%s' % (
-                redirect, kw['dbname'], kw['plan_id']
+            kw['redirect'] = '%s?dbname=%s&plan_id=%s&server_id=%s' % (
+                redirect, kw['dbname'], kw['plan_id'], kw['server_id']
             )
         return super(AuthSignupHome, self).web_auth_signup(*args, **kw)
 
@@ -29,7 +29,7 @@ class AuthSignupHome(auth_signup.controllers.main.AuthSignupHome):
         if not qcontext.get('countries', False):
             qcontext['countries'] = request.env['res.country'].search([])
         if not qcontext.get('base_saas_domain', False):
-            qcontext['base_saas_domain'] = self.get_saas_domain()
+            qcontext['base_saas_domain'] = request.env['saas_portal.server'].sudo().search([('active', '=', True)])
         return qcontext
 
     def get_saas_domain(self):

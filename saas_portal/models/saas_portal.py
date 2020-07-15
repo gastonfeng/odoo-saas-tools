@@ -525,6 +525,10 @@ class SaasPortalDatabase(models.Model):
     host = fields.Char('Host', compute='_compute_host')
     public_url = fields.Char(compute='_compute_public_url')
     password = fields.Char()
+    published = fields.Boolean(string='公开', default=True)
+    title = fields.Char(string='名称')
+    description = fields.Char(string='简要说明')
+    image = fields.Binary(string='图标', attachment=True)
 
     @api.multi
     def _compute_host(self):
